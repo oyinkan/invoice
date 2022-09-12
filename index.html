@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<title>Invoice Example</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="css/style.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+		<script>
+			function generatePDF() {
+				const element = document.getElementById('invoice');
+        var opt = {
+          filename: 'invoice.pdf'
+        };
+        html2pdf().set(opt).from(element).save();
+			}
+		</script>
+  </head>
+  <body>
+    <div id="invoice">
+      <header class="d-flex items-center justify-between border-bottom pb-1">
+        <div>
+          <a href="#" class="logo">KOICE</a>
+        </div>
+        <div>
+          <h1>Invoice</h1>
+        </div>
+      </header>
+      <main>
+        <div class="d-flex justify-between border-bottom">
+          <div class="py-15">
+            <p><strong>Date</strong> 05/12/2020</p>
+          </div>
+          <div class="text-right py-15">
+            <p><strong>Invoice No: </strong>16835</p>
+          </div>
+        </div>
+        <div class="d-flex justify-between">
+          <div class="py-15">
+            <p class="title"><strong>Invoice To:</strong></p>
+            <p>
+              Smith Rodes <br>
+              15 Hodges Mews, Hight Wycombe <br>
+              HP12 3JL <br>
+              United Kingdom.
+            </p>
+          </div>
+          <div class="text-right py-15">
+            <p class="title"><strong>Pay To:</strong></p>
+            <p>
+              Koice Inc <br>
+              2705 N. Enterprise St <br>
+              Orange, CA 92865 <br>
+              <a href="mailto:contact@koiceinc.com">contact@koiceinc.com</a>
+            </p>
+          </div>
+        </div>
+        <div class="table-responsive">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Service</th>
+                <th>Description</th>
+                <th>Rate</th>
+                <th class="text-center">QTY</th>
+                <th>Amount</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Design</td>
+                <td>Creating a website design</td>
+                <td>$50.00</td>
+                <td class="text-center">10</td>
+                <td>$500.00</td>
+              </tr>
+              <tr>
+                <td>Development</td>
+                <td>Website Development</td>
+                <td>$120.00</td>
+                <td class="text-center">10</td>
+                <td>$1200.00</td>
+              </tr>
+              <tr>
+                <td>SEO</td>
+                <td>Optimize the site for search engines (SEO)</td>
+                <td>$450.00</td>
+                <td class="text-center">1</td>
+                <td>$450.00</td>
+              </tr>
+              <tr class="total">
+                <td colspan="4" class="text-right"><strong>Sub Total:</strong></td>
+                <td>$2150.00</td>
+              </tr>
+              <tr class="total">
+                <td colspan="4" class="text-right"><strong>Tax:</strong></td>
+                <td>$215.00</td>
+              </tr>
+              <tr class="total">
+                <td colspan="4" class="text-right"><strong>Total:</strong></td>
+                <td>$2365.00</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </main>
+    </div>
+    <footer>
+      <div class="text-center">
+        <p class="py-15"><strong>NOTE: </strong>This is a computer generated receipt and does not require physical signature.</p>
+        <div>
+          <button onclick="window.print();"><img src="images/print.svg" alt="print icon"> Print</button>
+          <button onclick="generatePDF()"><img src="images/download.svg" alt="download icon"> Download</button>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

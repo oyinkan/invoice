@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&display=swap');
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+#invoice {
+  padding: 1rem 2.5rem;
+}
+p,
+th,
+td,
+a {
+  font-size: 1.2rem;
+  color: #555a61;
+  font-weight: 500;
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+.logo {
+  font-weight: bold;
+  font-size: 1.6rem;
+}
+h1 {
+  color: #102c5f;
+  font-weight: 500;
+}
+.d-flex {
+  display: flex;
+}
+.justify-between {
+  justify-content: space-between;
+}
+.items-center {
+  align-items: center;
+}
+.text-right {
+  text-align: right!important;
+}
+.text-center {
+  text-align: center!important;
+}
+.py-15 {
+  padding: 1.5rem 0;
+}
+.pt-15 {
+  padding-top: 1.5rem;
+}
+.pb-1 {
+  padding-bottom: 1rem;
+}
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.title {
+  padding-bottom: 5px;
+}
+.border-bottom,
+.table tr {
+  border-bottom: 1px solid #ccc;
+}
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.table th {
+  text-align: left;
+}
+.table th:last-child,
+.table tr td:last-child {
+  text-align: right;
+}
+.table td,
+.table th {
+  padding: 1rem;
+}
+.table tbody tr:last-child {
+  border-bottom: 0;
+}
+.table th,
+.total {
+  background: #f7f7f7;
+}
+button {
+  background: #f6f8fa;
+  color: #555a61;
+  border: 1px solid #9b9ea1;
+  font-size: 1.3rem;
+  border-radius: 4px;
+  padding: 5px 7.5px;
+  margin-left: -3px;
+  cursor: pointer;
+}
+button img {
+  height: 10px;
+}
+button:first-child {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+button:last-child {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-left: 0;
+}
